@@ -1,1 +1,7 @@
-Coming soon
+<script>$("button").click(function(){
+    $.getJSON("http://www.steamga.me/data/api/leaderboard.json", function(result){
+        $.each(result, function(i, field){
+            $("div").append(field + " ");
+        });
+    });
+});</script>
