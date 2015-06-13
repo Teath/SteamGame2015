@@ -8,18 +8,19 @@
 
 
 <script>
-function refreshScore()
-{
+function refreshScore() {
 	$(function() {
 		$.getJSON(
 		"http://www.steamga.me/data/api/leaderboard.json",
-		function(json){$('#Room1').text(json.query.results.("37559").level);
-		$('#Room2').text(json.query.results.("37651").level);
+		function(jd) {
+			alert(jd);
+//			$('#Room1').html(jd.37559.level);
+//			$('#Room2').text(json.query.results.37651.level);
 		});
 	});
 }
 
-setInterval( refreshScore, 10000 );
+setInterval( refreshScore, 5000 );
 </script>
 
 </body>
