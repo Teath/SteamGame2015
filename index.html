@@ -57,9 +57,9 @@ function getScore()
             success: function(data){
                 $('#Room2').text(data.response.game_data.level);
                 R2 = data.response.game_data.level
+                $('#Diff').text(R1 - R2);
             } 
         });
-        $('#Diff').text(R1 - R2);
     });
     setInterval( getScore, 60000 );
 }
